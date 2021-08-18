@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Canvas tutorial</title>
+    <style>
+      body {
+        min-height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: black;
+      }
+      #count {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: white;
+      }
+
+      #game-board {
+        background-color: #ccc;
+        width: 100vmin;
+        height: 100vmin;
+        display: grid;
+        grid-template-rows: repeat(21, 1fr);
+        grid-template-columns: repeat(21, 1fr);
+      }
+
+      .snake {
+        background-color: hsl(200, 100%, 50%);
+        border: .25vmin solid black;
+      }
+      .food {
+        background-color: hsl(50, 100%, 50%);
+        border: .25vmin solid black;
+      }
+    </style>
+    <script src="game.mjs" defer type="module"></script>
+    <script src="snake.mjs" defer type="module"></script>
+  </head>
+  <body>
+    <div id="count">00:00:00</div>
+    <div id="game-board"></div>
+  </body>
+</html>
